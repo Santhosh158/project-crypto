@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.App {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.Exchange1{
+  color: #f1356d;
+  margin-left: 16px;
+  padding: 6px;
+}
+/* .navbar .links {
+  margin-left: auto;
+} */
+.Exchange2{
+  color: #f1356d;
+  margin-right: 16px;
+  /* text-decoration: none; */
+  padding: 6px; 
+}
+.Exchange1:hover{
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.Exchange2:hover{
+  color: #9ddbc6;
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+/* .content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+} */
