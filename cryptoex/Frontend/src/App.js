@@ -1,5 +1,7 @@
 import Exchange1 from './Exchange1';
 import Exchange2 from './Exchange2';
+import Submit from './Submit';
+
 
 function App() {
   const title = 'Chainalysis - Project Cryptoex';
@@ -12,8 +14,13 @@ function App() {
       <div className = "Ex2">
         <Exchange2/>
       </div>
+      <div className = "Submit">
+        <Submit/>
+      </div>
     </div>
   );
 }
+
+
 
 export default App;
