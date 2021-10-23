@@ -1,11 +1,13 @@
-import { useState,useEffect } from "react";
-
+import React,{ useState,useEffect } from "react";
+import {coin,action} from "./RadioButton";
 const Compare = () => {
     
     const [btc1,setBtc1] = useState([]);
     const [eth1,setEth1] = useState([]);
     const [btc2,setBtc2] = useState([]);
     const [eth2,setEth2] = useState([]);
+
+
     const [out,setOut] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -14,7 +16,7 @@ const Compare = () => {
                 .then((res) => res.json()) 
                 .then((res) => {
                     setBtc1(res.bitcoin);
-                    setEth1(res.ethereum);
+                    setEth1(res.ethereum);   
                  });
                  fetch('/api/Ex2') 
                 .then((res) => res.json()) 
@@ -28,43 +30,49 @@ const Compare = () => {
         }
         fetchData(); 
     }, []);
+    
+    
+    const result = (props) => {
+        const BTCValue1 = btc1.usd;
+        const ETHValue1 = eth1.usd;
+        const BTCValue2 = btc2.USD;
+        const ETHValue2 = eth2.USD;
+        
+        console.log(props.action[0].action);
+        console.log(props.coin[0].coin);
 
-    let BTCValue1 = btc1.usd;
-    let ETHValue1 = eth1.usd;
-    let BTCValue2 = btc2.usd;
-    let ETHValue2 = eth2.usd;
-    console.log(BTCValue1);
-    const result = (value,coin) => {
-        if (value === "buy" && coin === "btc"){
+        
+        if ( props.action[0].action === "Buy" && props.coin[0].coin === "BTC"){
             if(BTCValue1 < BTCValue2){
                 return "Coingecko"
             }
             return "Cryptocompare"
         }
-        else if (value === "buy" && coin === "eth"){
+        else if (props.action[0].action === "Buy" && props.coin[0].coin === "ETH"){
             if(ETHValue1 < ETHValue2){
                 return "Coingecko"
             }
             return "Cryptocompare"
         }
-        else if (value === "sell" && coin === "btc"){
+        else if (props.action[0].action === "Sell" && props.coin[0].coin === "BTC"){
             if(BTCValue1 > BTCValue2){
                 return "Coingecko"
             }
             return "Cryptocompare"
         }
-        else {
+        else if (props.action[0].action === "Sell" && props.coin[0].coin === "ETH"){
             if(ETHValue1 > ETHValue2){
                 return "Coingecko"
             }
             return "Cryptocompare"
         }
+        else {
+            return "Please make a selection"
+        }
     }
-    let value = "buy";
-    let coin = "btc";
+    let props = {action:[action],coin:[coin]};
     const Submit = () => {
-        console.log(result(value,coin));
-        setOut(result());
+        setOut(result(props));
     }; 
     return (
         <div className="Submit">
@@ -73,7 +81,6 @@ const Compare = () => {
         </div>
     )  
 }
-
+  
 export default Compare;
-
 
