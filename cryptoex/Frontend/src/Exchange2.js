@@ -1,20 +1,27 @@
 import {useEffect,useState} from 'react';
-import axios from 'axios';
 import MessageBox from './MessageBox';
 import LoadingBox from './LoadingBox';
 
+
 const Exchange2 = () => {
-    const [value,setValue] = useState([]);
+    const [bitalue,setBitValue] = useState([]);
+    const [ethvalue,setEthValue] = useState([]);
+
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
     useEffect(() => {
         const fetchData = async () => {
             try{
                 setLoading(true);
-                const {data} = await axios.get('/api/Ex2');
-                setLoading(false);
-                setValue(data);
-
+                fetch('/api/Ex2')
+                .then((res) => res.json())
+                .then((data) => {
+                    setBitValue(data.BTC);
+                    setEthValue(data.ETH);
+                    // console.log(data);
+                    setLoading(false);
+                // setValue(data);
+                })
             } catch(err){
                 setLoading(false);
                 setError(err.message);
@@ -29,13 +36,19 @@ const Exchange2 = () => {
             ): error ? (
                 <MessageBox variant="danger"> {error} </MessageBox>
             ) : (
-            <div className="Exchange1">
-                <h1> Exchange 2 </h1>
-                <h2> {value} </h2>
+            <div className="Exchange2">
+                <h1> Cryptocompare </h1>
+                <div> Bitcoin </div>
+                <div> {bitalue.USD} </div>
+                <div> Ethereum </div>
+                <div> {ethvalue.USD} </div>
+
+
             </div>
             )}
         </div> 
      );
 }
  
+
 export default Exchange2;

@@ -1,6 +1,7 @@
+import Compare from './Compare';
 import Exchange1 from './Exchange1';
 import Exchange2 from './Exchange2';
-import Submit from './Submit';
+import Demo1 from './RadioButton';
 
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
         <Exchange2/>
       </div>
       <div className = "Submit">
-        <Submit/>
+        <Compare/>
+      </div>
+      <div className = "Submit">
+        <Demo1/>
       </div>
     </div>
   );

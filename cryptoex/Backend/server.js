@@ -13,7 +13,11 @@ app.get('/api/Ex1', (req,res) => {
 });
 
 app.get('/api/Ex2', (req,res) => {
-    res.send('Crypto value - Ex2');
+    fetch('https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD')
+    .then(res => res.json())
+    .then(json => {
+        res.send(json)
+    })
 });
 
 app.get('/',(req,res) =>{
