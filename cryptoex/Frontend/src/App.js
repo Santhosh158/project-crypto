@@ -8,19 +8,23 @@ function App() {
   const title = 'Chainalysis - Project Cryptoex';
   return (
     <div className="App">
-      <h1>{title}</h1>
-      <div className  = "Ex1">
-        <Exchange1/>
+      <h1><strong>{title}</strong></h1><br/>
+      <div>
+        <div className  = "Ex1">
+          <p><Exchange1/></p>
+        </div><br/>
+        <div className = "Ex2">
+          <Exchange2/>
+        </div><br/>
+        <div className = "Button">
+          <RadioButtons/>
+        </div><br/>
+        <div className = "Submit">
+          <Compare/>
+        </div>
       </div>
-      <div className = "Ex2">
-        <Exchange2/>
-      </div>
-      <div className = "Submit">
-        <Compare/>
-      </div>
-      <div className = "Button">
-        <RadioButtons/>
-      </div>
+      
+      
     </div>
   );
 }

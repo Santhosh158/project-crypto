@@ -13,16 +13,12 @@ class RadioButtons extends Component {
   }
 
   onChangeValue(event) {
-    // console.log(event.target.value);
     action['action'] = (event.target.value);
     console.log(action);
-//    const action = event.target.value;
   }
   onChangeValue1(event) {
-    // console.log(event.target.value);
     coin['coin'] =  (event.target.value);
     console.log(coin);
-//    const action = event.target.value;
   }
   
   render() {

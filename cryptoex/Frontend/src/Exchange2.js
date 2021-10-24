@@ -37,7 +37,7 @@ const Exchange2 = () => {
                 <MessageBox variant="danger"> {error} </MessageBox>
             ) : (
             <div className="Exchange2">
-                <h1> Cryptocompare </h1>
+                <h2> Cryptocompare </h2>
                 <div> Bitcoin </div>
                 <div> {bitalue.USD} </div>
                 <div> Ethereum </div>
