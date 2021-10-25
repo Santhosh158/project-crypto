@@ -1,0 +1,28 @@
+Questionnaire – Answers:
+Question 1:
+Are there any sub-optimal choices (or short cuts taken due to limited time) in your implementation?
+I’ve implemented the backend data fetch call to the server twice, one for the Exchange component to display the coin price and one more call in the Compare.js file to compare the prices and suggest the best solution to Buy /Sell. I thought of implementing the data call to backend in a separate file, so as to reduce multiple calls to the backend. Due to time constraints, I couldn’t implement them.
+
+Question 2:
+Is any part of it over-designed? (It is fine to over-design to showcase your skills as long as you are clear about it)
+I have designed a “RadioButton” component that takes in two user inputs, whether they want to buy/ sell and the coin type (Bitcoin / Ethereum). The user inputs are used to provide them with the buy or sell options when the click on the “Submit” button.
+•	Buy (BTC / ETH) – The exchange that has the low currency price is suggested to the user.
+•	Sell (BTC/ETH) – The exchange that has the high currency price is suggested.
+•	If the user clicks “Submit” without making any selection / all selection, a notification message is shown prompting the user to make the selections.
+
+Question 3:
+If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
+•	Identify all the static contents in the site such as images and css elements and making use of browser cache to handle these elements. It helps to reduce the page load time as these elements will be retrieved from the cache directly. 
+•	Improve the hardware resource such as RAM to better handle the running processes.
+•	Identify the component that consumes more time and optimize them if there is an easier approach.
+•	While the change in currency price between exchanges has a similar pattern, such that the low-price exchange remains lower and vice versa. In such case, instead of making call to the exchanges every time to retrieve the price info, they can be cached in the server side. This reduces the data fetch time from the exchange sources and instead the data can be served from the server cache data. A logic can be implemented to watch the price change in the exchanges and when a certain exchange price crossover the other one, the cached data can be updated with the latest price value. 
+
+Question 4:
+4.	What are some other enhancements you would have made, if you had more time to do this implementation
+•	I would have considered the security aspect in handling the user’s information and restrict the users/ hackers from accessing the server data.
+•	Improve the UI design as well the user experience. There are a lot of factors that goes into the layout design, like the colour, appearance that could attract and provide a good visual experience for the users. I couldn’t focus much on these aspects such as to improve the UI appearance. 
+•	The loading time, to reduce the multiple calls to the backend server and instead source the data from a single source and distribute them to different call request. 
+•	I’ve added the error component that displays the appropriate error message if the backend server call fails. Also added the loading message to display while the data is being retrieved. I could improve these to handle different error messages and also to display specific notification pop ups to the users. 
+
+
+
