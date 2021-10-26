@@ -39,9 +39,9 @@ const Exchange2 = () => {
             <div className="Exchange2">
                 <h2> Cryptocompare </h2>
                 <div> Bitcoin </div>
-                <div> {bitalue.USD} </div>
+                <div> ${bitalue.USD} </div>
                 <div> Ethereum </div>
-                <div> {ethvalue.USD} </div>
+                <div> ${ethvalue.USD} </div>
 
 
             </div>

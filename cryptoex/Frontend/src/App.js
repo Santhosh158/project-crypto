@@ -5,13 +5,19 @@ import RadioButtons from './RadioButton';
 
 
 function App() {
-  const title = 'Chainalysis - Project Cryptoex';
+  const title = 'Chainalysis';
   return (
     <div className="App">
-      <h1><strong>{title}</strong></h1><br/>
+      <div className="Title">
+        <div className="Bitcoin"/>
+        <div className="Ethereum"/>
+      <h1>{title}</h1><br/>
+      <h2>Cryptoex </h2>
+      </div>
       <div>
         <div className  = "Ex1">
-          <p><Exchange1/></p>
+          <Exchange1/>
+          
         </div><br/>
         <div className = "Ex2">
           <Exchange2/>
@@ -22,9 +28,10 @@ function App() {
         <div className = "Submit">
           <Compare/>
         </div>
+        
       </div>
-      
-      
+      <footer> <small>&copy; Copyright 2021, Chainalysis-Cryptoex-Santhosh Babu</small> </footer> 
+
     </div>
   );
 }

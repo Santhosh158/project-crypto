@@ -6,8 +6,6 @@ const Compare = () => {
     const [eth1,setEth1] = useState([]);
     const [btc2,setBtc2] = useState([]);
     const [eth2,setEth2] = useState([]);
-
-
     const [out,setOut] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
@@ -25,7 +23,7 @@ const Compare = () => {
                     setEth2(res.ETH);
                  });
             } catch(err){
-                
+                return "" ;
             }
         }
         fetchData(); 
@@ -44,30 +42,30 @@ const Compare = () => {
         
         if ( props.action[0].action === "Buy" && props.coin[0].coin === "BTC"){
             if(BTCValue1 < BTCValue2){
-                return "Coingecko"
+                return "You can checkout Coingecko to buy bitcoin"
             }
-            return "Cryptocompare"
+            return "You can checkout Cryptocompare to buy bitcoin"
         }
         else if (props.action[0].action === "Buy" && props.coin[0].coin === "ETH"){
             if(ETHValue1 < ETHValue2){
-                return "Coingecko"
+                return "You can checkout Coingecko to buy ethereum"
             }
-            return "Cryptocompare"
+            return "You can checkout Cryptocompare to buy ethereum"
         }
         else if (props.action[0].action === "Sell" && props.coin[0].coin === "BTC"){
             if(BTCValue1 > BTCValue2){
-                return "Coingecko"
+                return "You can checkout Coingecko to sell bitcoin"
             }
-            return "Cryptocompare"
+            return "You can checkout Cryptocompare to sell bitcoin"
         }
         else if (props.action[0].action === "Sell" && props.coin[0].coin === "ETH"){
             if(ETHValue1 > ETHValue2){
-                return "Coingecko"
+                return "You can checkout Coingecko to sell ethereum"
             }
-            return "Cryptocompare"
+            return "You can checkout Cryptocompare to sell ethereum"
         }
         else {
-            return "Please make a selection"
+            return "Please make the above selections"
         }
     }
     let props = {action:[action],coin:[coin]};

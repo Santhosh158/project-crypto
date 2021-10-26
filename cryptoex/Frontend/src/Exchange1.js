@@ -38,10 +38,10 @@ const Exchange1 = () => {
             ) : (
             <div className="Exchange1">
                 <h2> Coingecko </h2>
-                <p> Bitcoin </p>
-                <p> {btcvalue.usd} </p>
-                <p> Ethereum </p>
-                <p> {ethvalue.usd} </p>
+                <div> Bitcoin </div>
+                <div> ${btcvalue.usd} </div>
+                <div> Ethereum </div>
+                <div> ${ethvalue.usd} </div>
             </div>
             )}
         </div> 

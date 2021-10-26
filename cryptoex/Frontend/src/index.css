@@ -1,81 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
 /* base styles */
 * {
   margin: 0;
-  /* font-family: "Quicksand"; */
-  color: #333;
-  /* background-image: ("bitcoin.jpg"); */
-
+  background-color:white;
+  
 }
+
+.Bitcoin {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/96px-Bitcoin.svg.png);
+  background-size: 75px;
+  width: 75px;
+  height: 75px;
+  color: pink;
+  float: right;
+}
+
+.Ethereum {
+  background-image: url(https://cryptologos.cc/logos/ethereum-eth-logo.png?v=014);
+  background-size: 75px;
+  width: 75px;
+  height: 75px;
+  color: pink;
+  float: left;
+}
+
+
+
 .App {
   justify-content: center; 
-  display:grid;
   font-size: 20px;
   max-width: 600px;
   margin: 0 auto;
   border-bottom: double;
-  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  border-bottom-style: groove;
+  font-size: 19px;
+  font-weight: 300;
+  width: 100%;
+  height: 50%;
+  opacity: 0.8;
   
-  
-}
-.p  {
-  display:flex;
-  padding: 5;
-  margin: auto;
-  color: rgb(135, 135, 168);
-  text-align: left;
-  line-height: 30px;
-  border-bottom: double;
-
-  text-shadow: 2px 2px lightgray;
-  animation-fill-mode: forwards;
-
-
 }
 
   
 .Exchange1{
-  color: #f1356d;
+  color: black;
   padding: 6px;
-  margin: auto;
   column-count: 3;
   border-bottom: double;
-  border-bottom-color: steelblue;
-  text-shadow: 2px 2px lightgray;
-
-
-
+  border-bottom-color: green;
+  margin-top: 4em;
+  font-size: 21px;
 }
 
 .Exchange2{
-  color: #f1356d;
-  padding: 6px; 
-  margin: auto;
-  touch-action: pinch-zoom;
+  color: black;
+  padding: 7px; 
   border-bottom: double;
-  border-bottom-color: steelblue;
-
-
+  border-bottom-color: green;
+  margin-top: 1em;
+  margin-bottom: 2em;
   column-count: 3;
-  text-shadow: 2px 2px lightgray;
-  transition: width 2s;
+  font-size: 21px;
+  text-align:center;
 
-
-
-}
+} 
 .Exchange1:hover{
   color: #a8cec1;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 3px 5px rgba(207, 167, 167, 0.1);
 }
 .Exchange2:hover{
   color: #a8cec1;
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 3px 5px rgba(207, 167, 167, 0.1);
 }
 
+.Submit {
+  margin-bottom: 3em;
+}
 
 /* Alert */
 
@@ -99,5 +99,26 @@
   background-color: #ffe0e0e0;
 }
 
+.userAction {
+  font-size: large;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: lighter;
+}
+
+.Radio1 {
+  margin-bottom: 1em;
+}
+
+.Title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 1em;
+  font-stretch: wider;
+  font-size: 26px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 700;
+  line-height: 33.8px;
+  letter-spacing: 0px;
+}
 
 
