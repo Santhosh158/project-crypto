@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run server\" \"cd ./Frontend && npm start\"",
-    "server": "nodemon --watch Backend --exec node --experimental-modules Backend/server.js"
+    "server": "nodemon --watch Backend --exec node --experimental-modules Backend/server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --Frontend && npm run build --Frontend"
   },
   "author": "",
   "license": "ISC",
