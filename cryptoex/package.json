@@ -7,7 +7,9 @@
   "scripts": {
     "start": "concurrently \"npm run server\" \"cd ./Frontend && npm start\"",
     "server": "nodemon --watch Backend --exec node --experimental-modules Backend/server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --Frontend && npm run build --Frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --Frontend && npm run build --Frontend",
+    "install": "cd Frontend && npm install && npm run build && cd .."
+
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +20,5 @@
     "nodemon": "^2.0.14"
 
   }
-
+ 
 }
