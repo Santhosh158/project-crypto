@@ -25,8 +25,7 @@ use CD Frontend to change the currrent directory and use npm insall to install a
 (npm install - installs all the dependencies in a seperate folder 'node-modules')
 
 Run:
-While in the root folder directory, run npm start to start the backend server (If successful - Serve at 'http://localhost:5000' will be shown in the console)
-Navigate to the Frontend directory using CD Frontend. Then run npm start to start the frontend. If successful - you'll see 'Compiled successfully' in the console and the application will be opened in the browser. 
+While in the root folder directory, run npm run dev to start both the backend server and the frontend. The client gets opened in the browser window.  
 
 
 
