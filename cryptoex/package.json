@@ -5,11 +5,13 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch Backend --exec node --experimental-modules Backend/server.js"
+    "start": "concurrently \"npm run server\" \"cd ./Frontend && npm start\"",
+    "server": "nodemon --watch Backend --exec node --experimental-modules Backend/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^6.3.0",
     "express": "^4.17.1",
     "node-fetch": "^3.0.0"
   },
