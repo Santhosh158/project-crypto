@@ -26,18 +26,15 @@ app.get('/api/Ex2', (req,res) => {
 });
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('Frontend/public'));
-    
+    app.use(express.static('Frontend/build'));
+
 app.get('/',(req,res) =>{
     res.send('Server is ready');
 });
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname,"Frontend","public","index.html"));
-// });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'Frontend', 'public', 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'Frontend', 'build', 'index.html'));
   });
 }
 
