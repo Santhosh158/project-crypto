@@ -1,7 +1,12 @@
 import express from 'express';
 import fetch from 'node-fetch';
+import path from 'path';
+
 
 const app = express();
+const __dirname = path.resolve();
+
+app.use('/', express.static(path.join(__dirname, '/Frontend/public')));
 
 app.get('/api/Ex1', (req,res) => {
 
@@ -22,6 +27,10 @@ app.get('/api/Ex2', (req,res) => {
 
 app.get('/',(req,res) =>{
     res.send('Server is ready');
+});
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname,"Frontend","public","index.html"));
 });
 
 const port = process.env.PORT || 5000;
