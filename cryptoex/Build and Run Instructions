@@ -1,0 +1,34 @@
+Cryptoex application
+
+Built with
+Backend - Node.js (Express framework)
+Frontend - React 
+
+Prerequisites:
+-Windows system
+-Visual Studio code
+-Node.js 
+-Git 
+
+Setting up Dev:
+Choose the directory to clone the project repository
+Use git clone https://github.com/Santhosh158/project-crypto.git to clone the repository to local server
+
+Building:
+Use npm install in the root folder to insall all the required backend dependencies 
+--> Backend - express = framwork with collection of packages
+--> Backend - nodemon = to watch the backend server 
+--> Backend - node-fetch = to fetch the api data
+
+use CD Frontend to change the currrent directory and use npm insall to install all the required dependencies.
+
+(npm install - installs all the dependencies in a seperate folder 'node-modules')
+
+Run:
+While in the root folder directory, run npm start to start the backend server (If successful - Serve at 'http://localhost:5000' will be shown in the console)
+Navigate to the Frontend directory using CD Frontend. Then run npm start to start the frontend. If successful - you'll see 'Compiled successfully' in the console and the application will be opened in the browser. 
+
+
+
+
+
